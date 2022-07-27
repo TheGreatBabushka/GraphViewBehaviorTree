@@ -1,0 +1,160 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5155379537790931202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27167995e4d84a02bd1a15c6c467dc1b, type: 3}
+  m_Name: Fail
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: f7bc4fd09096d7a4ab0467abce549c85
+  nodeGraphPosition: {x: 753.6, y: 206.4}
+  hasMultipleParents: 0
+--- !u!114 &-1121361650087825436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 842f007efe2a4c7884bd748bcf9f7530, type: 3}
+  m_Name: WaitNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 07922b6fedf4e9c4595730ff53690c72
+  nodeGraphPosition: {x: 486.40002, y: 206.4}
+  hasMultipleParents: 0
+  duration: 3
+--- !u!114 &-1031592829062602356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 187b4c814d8745dd891809af976622ac, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 76f428d0dd2c21d4f902dbaf71a26fe3
+  nodeGraphPosition: {x: 219.20001, y: -153.88582}
+  hasMultipleParents: 0
+  children:
+  - {fileID: 7869959582140935069}
+  - {fileID: 8927892523074998139}
+  - {fileID: 9138876913095302984}
+  - {fileID: -1121361650087825436}
+  - {fileID: -5155379537790931202}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e6371a375614c15a896e2db4158a40c, type: 3}
+  m_Name: Test
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: -1031592829062602356}
+  treeState: 0
+  nodes:
+  - {fileID: -1031592829062602356}
+  - {fileID: 7869959582140935069}
+  - {fileID: -1121361650087825436}
+  - {fileID: 3566527279900723405}
+  - {fileID: 9138876913095302984}
+  - {fileID: 8927892523074998139}
+  - {fileID: -5155379537790931202}
+--- !u!114 &3566527279900723405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1f699b32fc44206aded9cbb43418fb7, type: 3}
+  m_Name: DelayNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 9657d10803ec4cb438c3a5692218141d
+  nodeGraphPosition: {x: -314.39993, y: 13.399889}
+  hasMultipleParents: 0
+  child: {fileID: 7869959582140935069}
+  timeToStart: 3
+  timeToStop: 5
+--- !u!114 &7869959582140935069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 431c8572020b46eca6bb34110cbfe55b, type: 3}
+  m_Name: DebugLogNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 720c2c590ec2abe45afded4e84898524
+  nodeGraphPosition: {x: -314.8, y: 206.4}
+  hasMultipleParents: 1
+  onStartMessage: start 1
+  onStopMessage: stop 1
+  onUpdateMessage: update 1
+--- !u!114 &8927892523074998139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 842f007efe2a4c7884bd748bcf9f7530, type: 3}
+  m_Name: WaitNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 435e4ef36c755444a89fc4daf17e183e
+  nodeGraphPosition: {x: -48, y: 206.4}
+  hasMultipleParents: 0
+  duration: 3
+--- !u!114 &9138876913095302984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 431c8572020b46eca6bb34110cbfe55b, type: 3}
+  m_Name: DebugLogNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 8d3d22be3bc86cf4980b3529bee688dd
+  nodeGraphPosition: {x: 219.20001, y: 206.4}
+  hasMultipleParents: 0
+  onStartMessage: start 2
+  onStopMessage: stop 2
+  onUpdateMessage: update 2
